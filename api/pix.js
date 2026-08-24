@@ -2,6 +2,16 @@ const { blackcat, extrairPix } = require('./_blackcat');
 const { resolverProduto } = require('./_catalog');
 const { enviarOrder, empacotarContexto, montarContexto } = require('./_utmify');
 
+// Função para gerar um PIX de fallback quando a Blackcat não está disponível
+function gerarPixFallback(ref) {
+  // Retorna um PIX válido de exemplo para testes (nunca deve ser usado em produção)
+  const cpf = '12345678901';
+  const pixQrCode = '00020126360014br.gov.bcb.brcode0136' + cpf + 
+    '5303986540510.005802BR591' + cpf + '6009SAO PAULO62' +
+    '02' + ref + '63043D91';
+  return pixQrCode;
+}
+
 function soDigitos(v) { return String(v || '').replace(/\D/g, ''); }
 function primeiroIp(req) {
   return (req.headers['x-forwarded-for'] || '').split(',')[0].trim() || '0.0.0.0';
@@ -40,9 +50,15 @@ module.exports = async function handler(req, res) {
 
   try {
     const body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {});
+    
+    console.log('[pix.js] Recebido POST:', { upKey: body.upKey, nome: body.nome, cpf: body.cpf?.slice(0, 3) + '***' });
 
     const produto = resolverProduto(body.upKey);
-    if (!produto) { res.status(400).json({ success: false, message: 'Produto invalido.' }); return; }
+    if (!produto) { 
+      console.error('[pix.js] Produto inválido:', body.upKey);
+      res.status(400).json({ success: false, message: 'Produto invalido.' }); 
+      return; 
+    }
 
     const cpf = cpfValido(body.cpf) ? soDigitos(body.cpf) : gerarCpf();
     const nome = String(body.nome || '').trim() || 'Cliente Nubank';
@@ -97,8 +113,19 @@ module.exports = async function handler(req, res) {
     const txnId = dados && dados.transactionId;
     const qrcode = extrairPix(r.dados);
 
+    console.log('[pix.js] Resposta Blackcat - ok:', r.ok, '| txnId:', txnId, '| qrcode extraído:', !!qrcode);
+
     if (!r.ok || !txnId || !qrcode) {
-      console.error('Blackcat create falhou', r.statusHttp, JSON.stringify(r.dados).slice(0, 600));
+      console.error('[pix.js] Blackcat create falhou', r.statusHttp, JSON.stringify(r.dados).slice(0, 600));
+      
+      // Se BLACKCAT_API_KEY não está definida, retorna erro específico
+      if (process.env.BLACKCAT_API_KEY === undefined) {
+        return res.status(200).json({ 
+          success: false, 
+          message: 'Chave da API Blackcat não configurada (BLACKCAT_API_KEY ausente). Configure a variável de ambiente no Vercel.' 
+        });
+      }
+      
       res.status(200).json({ success: false, message: 'Nao foi possivel gerar o PIX. Tente novamente.' });
       return;
     }
@@ -107,10 +134,11 @@ module.exports = async function handler(req, res) {
     // fire-and-forget morre ao congelar a funcao e a pendente "nao sai".
     try { await enviarOrder({ orderId: txnId, status: 'waiting_payment', ctx }); } catch (e) {}
 
+    console.log('[pix.js] Retornando PIX com sucesso - txnId:', txnId);
     res.setHeader('Cache-Control', 'no-store');
     res.status(200).json({ success: true, amount: produto.price, qrcode, txnId });
   } catch (e) {
-    console.error('pix handler erro', e);
+    console.error('[pix.js] handler erro', e.message);
     res.status(200).json({ success: false, message: 'Erro interno. Tente novamente.' });
   }
 };
