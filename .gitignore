@@ -1,1 +1,43 @@
-.vercel
+# Ignore arquivos de sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Ignore arquivos de editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore dependências (se usar Node.js)
+node_modules/
+package-lock.json
+npm-debug.log
+
+# Ignore builds
+dist/
+build/
+*.min.js
+*.min.css
+
+# Ignore arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Ignore pasta temporária
+temp/
+tmp/
+
+# Ignore logs
+*.log
+logs/
+
+# Ignore arquivos temporários do sistema operacional
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
