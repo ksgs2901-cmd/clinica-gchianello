@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Odontológica Dr. Giovani Chianello | Restauração de Autoestima</title>
+    <meta name="description" content="Clínica odontológica especializada em restauração de autoestima com 29 anos de experiência e mais de 27 mil pacientes atendidos.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset e Variáveis Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0066cc;
+            --primary-dark: #0052a3;
+            --secondary-color: #00a8e8;
+            --accent-color: #00d4ff;
+            --dark-color: #1a1a1a;
+            --light-color: #f8f9fa;
+            --text-color: #333333;
+            --border-color: #e0e0e0;
+            --success-color: #28a745;
+            --transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.4);
+            background: linear-gradient(135deg, var(--primary-dark), #0082d4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-light {
+            background: white;
+            color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-light:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Header e Navegação */
+        .header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            padding: 20px 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .logo .tagline {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            margin: 0;
+            font-style: italic;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-menu a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 0;
+            gap: 50px;
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.05), rgba(0, 168, 232, 0.05));
+        }
+
+        .hero-content {
+            flex: 1;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .placeholder-image {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 100px;
+            color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 102, 204, 0.2);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 30px;
+        }
+
+        /* Sobre Section */
+        .sobre {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 60px;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+        }
+
+        /* Serviços Section */
+        .servicos {
+            padding: 100px 0;
+            background: var(--light-color);
+        }
+
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .servico-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid transparent;
+        }
+
+        .servico-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 102, 204, 0.15);
+            border-top-color: var(--primary-color);
+        }
+
+        .servico-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        /* CTA Principal */
+        .cta-principal {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 2.8rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 40px;
+        }
+
+        /* Contato Section */
+        .contato {
+            padding: 100px 0;
+            background: var(--light-color);
+        }
+
+        .contato-info {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .contato-info i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .contato-info h3 {
+            margin-bottom: 15px;
+        }
+
+        .contato-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 0 20px;
+            text-align: center;
+        }
+
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            transition: var(--transition);
+            z-index: 999;
+            text-decoration: none;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                padding: 60px 0;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .nav-menu {
+                gap: 20px;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>Dr. Giovani Chianello</h1>
+                        <p class="tagline">Restauração de Autoestima</p>
+                    </div>
+                    <ul class="nav-menu">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">Transforme seu Sorriso, Recupere sua Autoestima</h2>
+            <p class="hero-subtitle">29 anos de experiência | Mais de 27 mil pacientes transformados</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5512988606134?text=Olá! Gostaria de agendar uma consulta." class="btn btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Agendar Consulta
+                </a>
+                <a href="https://www.instagram.com/gchianello/" class="btn btn-secondary" target="_blank">
+                    <i class="fab fa-instagram"></i> Acompanhe
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="placeholder-image">
+                <i class="fas fa-tooth"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sobre Dr. Giovani Chianello</h2>
+                <p>Especialista em transformar sorrisos e restaurar a autoestima</p>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>29</h3>
+                    <p>Anos de Experiência</p>
+                </div>
+                <div class="stat-item">
+                    <h3>27K+</h3>
+                    <p>Pacientes Atendidos</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5K+</h3>
+                    <p>Seguidores no Instagram</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Satisfação Garantida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Serviços</h2>
+                <p>Soluções completas em odontologia estética e funcional</p>
+            </div>
+
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3>Odontologia Estética</h3>
+                    <p>Clareamento, facetas e restaurações que transformam seu sorriso.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <h3>Implantes Dentários</h3>
+                    <p>Implantes duráveis e naturais que recuperam a funcionalidade.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Prótese Dentária</h3>
+                    <p>Próteses fixas e removíveis confeccionadas com precisão.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-spray-can"></i>
+                    </div>
+                    <h3>Clareamento Dental</h3>
+                    <p>Clareamento profissional seguro e eficaz.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-shield"></i>
+                    </div>
+                    <h3>Limpeza e Prevenção</h3>
+                    <p>Tratamentos preventivos para manter sua saúde bucal.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>Harmonização Orofacial</h3>
+                    <p>Tratamentos integrados para harmonia perfeita.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-principal">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto para Transformar seu Sorriso?</h2>
+                <p>Não espere mais. Agende sua consulta hoje e descubra como podemos restaurar sua autoestima.</p>
+                <a href="https://wa.me/5512988606134?text=Olá! Gostaria de agendar uma consulta." class="btn btn-light" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Agendar Agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <div class="section-header">
+                <h2>Entre em Contato</h2>
+                <p>Queremos ouvir você e tirar todas as suas dúvidas</p>
+            </div>
+
+            <div class="contato-info">
+                <i class="fab fa-whatsapp"></i>
+                <h3>WhatsApp</h3>
+                <p><a href="https://wa.me/5512988606134" target="_blank">Clique aqui para enviar mensagem</a></p>
+                <p><strong>(12) 98860-6134</strong></p>
+            </div>
+
+            <div style="margin-top: 30px;" class="contato-info">
+                <i class="fab fa-instagram"></i>
+                <h3>Instagram</h3>
+                <p><a href="https://www.instagram.com/gchianello/" target="_blank">@gchianello - Siga-nos para dicas e resultados</a></p>
+            </div>
+
+            <div style="margin-top: 30px;" class="contato-info">
+                <i class="fas fa-phone"></i>
+                <h3>Telefone</h3>
+                <p><a href="tel:+5512988606134">(12) 3635-4828</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h4>Clínica Odontológica</h4>
+            <p>Dr. Giovani Chianello - Especialista em Restauração de Autoestima</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dr. Giovani Chianello. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button (Floating) -->
+    <a href="https://wa.me/5512988606134" target="_blank" class="whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
